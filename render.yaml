@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: PetChati-backend
+    env: node
+    buildCommand: "npm install"
+    startCommand: "npm run start"
+    region: oregon
+    plan: free
+  - type: web
+    name: PetChati-frontend
+    env: static
+    buildCommand: "cd frontend && npm install && npm run build"
+    staticPublishPath: "frontend/build"
+    region: oregon
+    plan: free
